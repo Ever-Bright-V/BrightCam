@@ -404,25 +404,25 @@ begin
   begin
     dxBarManager1Bar1.Visible := False;
   end;
-  if (Key = 112) and (dxBarButton2.Enabled = True) then    //开启摄像头 F1
+  if (ssCtrl in Shift) and (Key = 49) and (dxBarButton2.Enabled = True) then    //开启摄像头 Ctrl+1
   begin
     dxBarButton2.Click;
   end;
-  if (Key = 113) and (dxBarButton3.Enabled = true) then    //关闭摄像头 F2
+  if (ssCtrl in Shift) and (Key = 50) and (dxBarButton3.Enabled = true) then    //关闭摄像头 Ctrl+12
   begin
     dxBarButton3.Click;
   end;
-  if (Key = 114) and (dxBarButton6.Enabled = true) then    //暂停摄像头 F3
+  if (ssCtrl in Shift) and (Key = 51) and (dxBarButton6.Enabled = true) then    //暂停摄像头 F3
   begin
     dxBarButton6.Click;
   end;
-  if (Key = 115) and (dxBarButton5.Enabled = true) then    //继续摄像头 F4
+  if (ssCtrl in Shift) and (Key = 52) and (dxBarButton5.Enabled = true) then    //继续摄像头 F4
   begin
     dxBarButton5.Click;
   end;
-  if (Key = 116) and (dxBarButton9.Enabled = true) then    //截图 F5
+  if (ssCtrl in Shift) and (Key = 53) and (dxBarButton9.Enabled = true) then    //截图 F5
   begin
-    if ssCtrl in Shift then
+    if ssAlt in Shift then
     begin
       dxBarButton14.Click;
       dxBarButton9.Click;
@@ -432,9 +432,9 @@ begin
       dxBarButton9.Click;
     end;
   end;
-  if (Key = 117) and (dxBarButton7.Enabled = true) then   //开始录制  F6
+  if (ssCtrl in Shift) and (Key = 54) and (dxBarButton7.Enabled = true) then   //开始录制  F6
   begin
-    if ssCtrl in Shift then
+    if ssAlt in Shift then
     begin
       dxBarButton14.Click;
       dxBarButton7.Click;
@@ -444,31 +444,31 @@ begin
       dxBarButton7.Click;
     end;
   end;
-  if (Key = 118) and (dxBarButton8.Enabled = true) then     //停止录制  F7
+  if (ssCtrl in Shift) and (Key = 55) and (dxBarButton8.Enabled = true) then     //停止录制  F7
   begin
     dxBarButton8.Click;
   end;
-  if (Key = 119) and (dxBarButton10.Enabled = true) then    //最佳分辨律  F8
+  if (ssCtrl in Shift) and (Key = 56) and (dxBarButton10.Enabled = true) then    //最佳分辨律  F8
   begin
     dxBarButton10.Click;
   end;
-  if (Key = 120) and (dxBarButton11.Enabled = true) then    //置顶   F9
+  if (ssCtrl in Shift) and (Key = 57) and (dxBarButton11.Enabled = true) then    //置顶
   begin
     dxBarButton11.Click;
   end;
-  if (Key = 121) and (dxBarButton13.Enabled = true) then    //设置 F10
+  if (ssCtrl in Shift) and (Key = 48) and (dxBarButton13.Enabled = true) then    //设置       ctrl+0
   begin
     dxBarButton13.Click;
   end;
-  if (Key = 122) and (dxBarButton14.Enabled = true) and (dxBarButton14.Visible = ivAlways) then   //路径   F11
+  if (ssCtrl in Shift) and (Key = 189) and (dxBarButton14.Enabled = true) and (dxBarButton14.Visible = ivAlways) then   //路径    ctrl+-
   begin
     dxBarButton14.Click;
   end;
-  if (Key = 123) and (dxBarButton16.Enabled = true) then   //打开路径  F12
+  if (ssCtrl in Shift) and (Key = 187) and (dxBarButton16.Enabled = true) then   //打开路径 ctrl+=
   begin
     dxBarButton16.Click;
   end;
-  if (Key = 27) and (dxBarButton12.Enabled = true) then  //关闭  Esc
+  if (ssAlt in Shift) and (ssCtrl in Shift) and (Key = 8) and (dxBarButton12.Enabled = true) then  //关闭  ctrl+alt+backspace
   begin
     dxBarButton12.Click;
   end;

@@ -6634,7 +6634,7 @@ object Form1: TForm1
     object dxBarButton2: TdxBarButton
       Caption = #24320#21551#25668#20687#22836
       Category = 0
-      Hint = #24320#21551#25668#20687#22836'/F1'
+      Hint = #24320#21551#25668#20687#22836'/Ctrl+1'
       Visible = ivAlways
       ImageIndex = 6
       LargeGlyph.SourceHeight = 128
@@ -6645,7 +6645,7 @@ object Form1: TForm1
       Caption = #20851#38381#25668#20687#22836
       Category = 0
       Enabled = False
-      Hint = #20851#38381#25668#20687#22836'/F2'
+      Hint = #20851#38381#25668#20687#22836'/Ctrl+2'
       Visible = ivAlways
       ImageIndex = 1
       LargeGlyph.SourceDPI = 96
@@ -6771,7 +6771,7 @@ object Form1: TForm1
       Caption = #32487#32493#25668#20687#22836
       Category = 0
       Enabled = False
-      Hint = #32487#32493#25668#20687#22836'/F4'
+      Hint = #32487#32493#25668#20687#22836'/Ctrl+4'
       Visible = ivAlways
       Glyph.SourceHeight = 128
       ImageIndex = 2
@@ -6781,7 +6781,7 @@ object Form1: TForm1
       Caption = #26242#20572#25668#20687#22836
       Category = 0
       Enabled = False
-      Hint = #26242#20572#25668#20687#22836'/F3'
+      Hint = #26242#20572#25668#20687#22836'/Ctrl+3'
       Visible = ivAlways
       ImageIndex = 10
       OnClick = dxBarButton6Click
@@ -6803,7 +6803,7 @@ object Form1: TForm1
       Caption = #24320#21551#24405#20687
       Category = 0
       Enabled = False
-      Hint = #24320#21551#24405#20687'/F6(Ctrl'#65289
+      Hint = #24320#21551#24405#20687'/Ctrl+6(Alt'#65289
       Visible = ivAlways
       ImageIndex = 5
       OnClick = dxBarButton7Click
@@ -6812,7 +6812,7 @@ object Form1: TForm1
       Caption = #32467#26463#24405#20687
       Category = 0
       Enabled = False
-      Hint = #32467#26463#24405#20687'/F7'
+      Hint = #32467#26463#24405#20687'/Ctrl+7'
       Visible = ivAlways
       ImageIndex = 3
       OnClick = dxBarButton8Click
@@ -6821,7 +6821,7 @@ object Form1: TForm1
       Caption = #25130#23631
       Category = 0
       Enabled = False
-      Hint = #25130#23631'/F5(Ctrl)'
+      Hint = #25130#23631'/Ctrl+5(Alt)'
       Visible = ivAlways
       ImageIndex = 4
       OnClick = dxBarButton9Click
@@ -6830,7 +6830,7 @@ object Form1: TForm1
       Caption = #26368#20339#26174#31034
       Category = 0
       Enabled = False
-      Hint = #26368#20339#26174#31034'/F8'
+      Hint = #26368#20339#26174#31034'/Ctrl+8'
       Visible = ivAlways
       ImageIndex = 12
       OnClick = dxBarButton10Click
@@ -6838,7 +6838,7 @@ object Form1: TForm1
     object dxBarButton11: TdxBarButton
       Caption = #32622#39030
       Category = 0
-      Hint = #32622#39030'/F9'
+      Hint = #32622#39030'/Ctrl+9'
       Visible = ivAlways
       ButtonStyle = bsChecked
       ImageIndex = 11
@@ -6847,7 +6847,7 @@ object Form1: TForm1
     object dxBarButton12: TdxBarButton
       Caption = #20851#38381
       Category = 0
-      Hint = #20851#38381'/Esc'
+      Hint = #20851#38381'/Ctrl+Backspace'
       Visible = ivAlways
       ImageIndex = 9
       OnClick = dxBarButton12Click
@@ -6855,7 +6855,7 @@ object Form1: TForm1
     object dxBarButton13: TdxBarButton
       Caption = #35774#32622
       Category = 0
-      Hint = #35774#32622'/F10'
+      Hint = #35774#32622'/Ctrl+0'
       Visible = ivAlways
       ImageIndex = 8
       OnClick = dxBarButton13Click
@@ -6881,7 +6881,7 @@ object Form1: TForm1
     object dxBarButton14: TdxBarButton
       Caption = #40664#35748#36335#24452
       Category = 0
-      Hint = #40664#35748#36335#24452'/F11'
+      Hint = #40664#35748#36335#24452'Ctrl+-'
       Visible = ivNever
       ImageIndex = 7
       OnClick = dxBarButton14Click
@@ -6897,7 +6897,7 @@ object Form1: TForm1
     object dxBarButton16: TdxBarButton
       Caption = #25171#24320#25991#20214#22841
       Category = 0
-      Hint = #25171#24320#25991#20214#22841'/F12'
+      Hint = #25171#24320#25991#20214#22841'/Ctrl+='
       Visible = ivAlways
       ImageIndex = 13
       OnClick = dxBarButton16Click
