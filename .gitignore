@@ -1,0 +1,6 @@
+#屏蔽 ini
+Win32/Debug/Data/ini/*.ini
+
+#屏蔽 output具体内容
+Win32/Debug/Output/image/*.bmp
+Win32/Debug/Output/video/*.avi
