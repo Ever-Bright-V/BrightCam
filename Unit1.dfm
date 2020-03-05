@@ -6903,4 +6903,11 @@ object Form1: TForm1
       OnClick = dxBarButton16Click
     end
   end
+  object Timer5: TTimer
+    Enabled = False
+    Interval = 15
+    OnTimer = Timer5Timer
+    Left = 256
+    Top = 80
+  end
 end

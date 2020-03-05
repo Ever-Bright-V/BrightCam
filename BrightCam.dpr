@@ -2,7 +2,8 @@ program BrightCam;
 
 uses
   Vcl.Forms,
-  Unit1 in 'Unit1.pas' {Form1};
+  Unit1 in 'Unit1.pas' {Form1},
+  MSec2Time in 'MSec2Time.pas';
 
 {$R *.res}
 

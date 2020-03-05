@@ -3,7 +3,7 @@ unit Unit1;
 interface
 
 uses
-  Winapi.ShellAPI, System.IniFiles, Winapi.Windows, Winapi.Messages,
+  Msec2time, Winapi.ShellAPI, System.IniFiles, Winapi.Windows, Winapi.Messages,
   System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls,
   Vcl.Forms, Vcl.Dialogs, dxSkinsCore, dxSkinsDefaultPainters, dxBar, cxClasses,
   System.ImageList, Vcl.ImgList, dxBarExtItems, cxLabel, cxBarEditItem,
@@ -44,6 +44,7 @@ type
     dxBarButton14: TdxBarButton;
     dxBarButton15: TdxBarButton;
     dxBarButton16: TdxBarButton;
+    Timer5: TTimer;
     procedure dxCameraControl1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure cxImage1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure dxBarButton2Click(Sender: TObject);
@@ -69,6 +70,7 @@ type
     procedure dxBarButton15Click(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure dxBarButton16Click(Sender: TObject);
+    procedure Timer5Timer(Sender: TObject);
   private
     { Private declarations }
     procedure CreateParams(var Params: TCreateParams); override;
@@ -89,6 +91,10 @@ var
   Section: string;
   ImagePath: string;
   VideoPath: string;
+
+var
+  StartRec: DWORD;
+  StopRec: DWORD;
 
 function OpreateFileName(OldPath: string): string;
 
@@ -292,10 +298,15 @@ begin
   dxBarButton5.Enabled := False;
   dxBarButton7.Enabled := False;
   dxBarButton8.Enabled := True;
+  // 计时设置
+  StartRec := GetTickCount;
+  Timer5.Enabled := True;
 end;
 
 procedure TForm1.dxBarButton8Click(Sender: TObject);
 begin
+  Timer5.Enabled := False;  // 先取消计时,后停，这样 部分处理 时间不会 被看见家计时了
+  StartRec := 0;
   dxCameraManager.StopRecording(dxCameraControl1.DeviceIndex);
   dxBarButton7.Enabled := True;
   dxBarButton3.Enabled := True;
@@ -303,6 +314,7 @@ begin
   dxBarButton5.Enabled := True;
   dxBarButton9.Enabled := True;
   dxBarButton8.Enabled := False;
+  //StopRec:=GetTickCount;
 end;
 
 procedure TForm1.dxBarButton9Click(Sender: TObject);
@@ -385,6 +397,7 @@ begin
   LTep.Empty;
   sGUID := '';
   CamSafeFlag := True;
+  //dxCameraControl1.Canvas.TextOut(30, 20, 'Test');
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -521,6 +534,31 @@ procedure TForm1.Timer4Timer(Sender: TObject);
 begin
   cxImage2.Left := dxCameraControl1.Left;
   cxImage2.Top := dxCameraControl1.Top + dxCameraControl1.Height - cximage2.height;
+end;
+
+procedure TForm1.Timer5Timer(Sender: TObject);   // 录像提示信息（canvas 画图）
+var
+  D: Integer;
+  Str: string;
+  X: Integer;
+  Y: Integer;
+  Dit: Integer;
+  RecTime: DWORD;
+begin
+  RecTime := GetTickCount - StartRec;
+  Str := 'REC ' + MSecToHMSmS(RecTime, 0);
+  X := 30;
+  Y := 20;
+  Dit := 2;
+  with dxCameraControl1.Canvas do
+  begin
+    Brush.Style := bsClear;
+    Pen.Color := clRed;
+    Font.Color := clRed;
+    TextOut(X, Y, Str);
+  end;
+  D := dxCameraControl1.Canvas.TextHeight(Str);
+  dxCameraControl1.Canvas.Ellipse(X - D - Dit + 2, Y + 2, X - Dit - 2, Y + D - 2);
 end;
 
 end.
